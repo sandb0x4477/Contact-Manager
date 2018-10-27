@@ -1,0 +1,38 @@
+<div class="columns is-centered">
+
+  <div class="column is-half">
+    <div class="notification">
+      <!-- <button class="delete"></button> -->
+      <p>Username: <strong>admin</strong></p>
+      <p>Password: <strong>zjdqv0lrPm9Q</strong></p>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="columns is-centered">
+
+<div class="column is-half">
+
+  <form #loginForm="ngForm" (submit)="onSubmit(loginForm)" class="loginForm is-centered">
+    <div class="field">
+      <label class="label">Username</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="e.g. admin" autofocus="" name="username" ngModel>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Password</label>
+
+      <div class="control">
+        <input class="input" type="password" placeholder="e.g. Bunny" name="password" ngModel>
+      </div>
+    </div>
+
+    <button class="button is-block is-info is-fullwidth">Login</button>
+  </form>
+
+</div>
+</div>

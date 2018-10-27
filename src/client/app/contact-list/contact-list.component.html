@@ -1,0 +1,73 @@
+<div class="row columns is-multiline is-centered">
+
+  <!-- CARD -->
+  <div class="column
+  is-half-tablet
+  is-one-third-desktop
+  is-one-quarter-widescreen" *ngFor="let contact of contacts">
+
+    <div class="card">
+
+      <div class="card-image">
+        <figure class="image"> <img src="{{contact.photoUrl}}" alt="Image"> </figure>
+      </div>
+
+      <div class="card-content">
+        <p class="title is-4">{{contact.name}}</p>
+
+        <div class="content">
+
+          <div>
+            <span class="icon">
+              <i class="fas fa-address-card">&nbsp;</i>
+            </span>
+
+            <span class="is-size-6">{{contact.address}}</span>
+          </div>
+
+          <div>
+            <span class="icon">
+              <i class="fas fa-map-marker-alt">&nbsp;</i>
+            </span>
+
+            <span class="is-size-6">{{contact.city}},&nbsp; {{contact.postcode}}
+            </span>
+          </div>
+
+          <div>
+            <span class="icon">
+              <i class="fas fa-at">&nbsp;</i>
+            </span>
+            <span class="is-size-6">{{contact.email}}</span>
+          </div>
+
+          <div>
+            <span class="icon">
+              <i class="fas fa-phone">&nbsp;</i>
+            </span>
+            <span class="is-size-6">{{contact.phone}}</span>
+          </div>
+
+
+        </div>
+
+      </div>
+
+      <footer class="card-footer">
+        <a class="card-footer-item" (click)="editContact(contact)">
+          <span class="icon">
+            <i class="fas fa-user-edit">&nbsp;&nbsp;</i>
+          </span>Edit</a>
+
+        <a class="card-footer-item" (click)="deleteContact(contact)">
+          <span class="icon">
+            <i class="fas fa-user-slash">&nbsp;&nbsp;</i>
+          </span>
+          Delete</a>
+      </footer>
+
+    </div>
+  </div>
+  <!-- CARD -->
+
+</div>

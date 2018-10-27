@@ -1,0 +1,70 @@
+<div class="columns is-centered">
+
+  <div class="column is-half">
+
+    <form #contactForm="ngForm" (submit)="onSubmit(contactForm)">
+
+      <div class="field">
+        <label class="label">Full Name</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="e.g Alex Smith" name="name" ngModel>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Address</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="e.g 8654 Stevenson Blv" name="address" ngModel>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Email</label>
+        <div class="control">
+          <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com" name="email" ngModel>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">City</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="e.g. Boston" name="city" ngModel>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Postcode</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="e.g. 45214" name="postcode" ngModel>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Phone</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="e.g. 777-8547-4856" name="phone" ngModel>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Photo Url</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="e.g. https://www.test.com/image.jpg" name="photoUrl" ngModel>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <button class="button is-link is-fullwidth">Submit</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <button  type="button" class="button is-fullwidth" [routerLink]="['/contacts']">Cancel</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>

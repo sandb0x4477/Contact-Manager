@@ -1,0 +1,32 @@
+<div class="navbar navbar is-info is-fixed-top">
+  <div class="navbar-brand">
+    <a class="navbar-item" [routerLink]="['/contacts']">
+      <span>&nbsp;&nbsp;</span>
+      <span class="icon">
+        <i class="fas fa-users fa-2x"></i>
+      </span>
+      <div class="navbar-item">
+        <span>&nbsp;&nbsp; Contact Manager</span>
+      </div>
+    </a>
+
+    <div class="navbar-item" *ngIf="auth.isLoggedIn()">
+      <a class="button is-link" [routerLink]="['/add']">
+        <span>Add</span>
+        <span class="icon">
+          <i class="fas fa-user-plus"></i>
+        </span>
+      </a>
+    </div>
+
+    <div class="navbar-item" *ngIf="auth.isLoggedIn()">
+      <a class="button is-link" [routerLink]="['/logout']" (click)="logout()">
+        <span>Logout</span>
+        <span class="icon">
+          <i class="fas fa-sign-in-alt"></i>
+        </span>
+      </a>
+    </div>
+
+  </div>
+</div>
